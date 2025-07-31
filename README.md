@@ -12,10 +12,7 @@ A comprehensive guide for setting up a complete RISC-V development toolchain wit
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Issues Encountered & Solutions](#issues-encountered--solutions)
-- [Final Test](#final-test)
 - [Project Structure](#project-structure)
-- [Usage](#usage)
-- [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -428,3 +425,4 @@ Host: kevinshah-Dell-G15-5520
 UniqueID: 0x5ccf0ab8853aa91c
 GCC_VLEN: 5
 ```
+
