@@ -12,7 +12,7 @@ A comprehensive guide for setting up a complete RISC-V development toolchain wit
 - [Prerequisites](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/README.md#-prerequisites)
 - [Installation](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/README.md#-installation)
 - [Issues Encountered & Solutions](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/README.md#-issues-encountered--solutions)
-- [Project Structure](#project-structure)
+- [Project Structure](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/README.md#-project-structure)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -521,3 +521,17 @@ GCC_VLEN: 5
 - [ ] PATH configuration persists across shell sessions
 - [ ] No cross-compiler interference with native builds
 
+### 📁 Project Structure
+
+```
+riscv_toolchain/
+├── riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/
+│   ├── bin/                    
+│   ├── lib/                    
+│   └── riscv64-unknown-elf/   
+├── riscv-isa-sim/              
+├── riscv-pk/                   
+├── iverilog/                  
+├── unique_test.c               
+└── unique_test                
+```
