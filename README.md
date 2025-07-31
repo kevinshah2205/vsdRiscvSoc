@@ -11,7 +11,7 @@ A comprehensive guide for setting up a complete RISC-V development toolchain wit
 - [Overview](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/README.md#-overview)
 - [Prerequisites](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/README.md#-prerequisites)
 - [Installation](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/README.md#-installation)
-- [Issues Encountered & Solutions](#issues-encountered--solutions)
+- [Issues Encountered & Solutions](https://github.com/kevinshah2205/vsdRiscvSoc/edit/main/README.md#-issues-encountered--solutions)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
@@ -426,3 +426,18 @@ UniqueID: 0x5ccf0ab8853aa91c
 GCC_VLEN: 5
 ```
 
+# 🚨 Issues Encountered & Solutions
+
+## Summary Table of All Problems and Fixes
+
+| Task | Issue Description | Root Cause | Symptoms | Failed Attempts | Final Solution | Status |
+|------|------------------|------------|----------|-----------------|----------------|--------|
+| **Task 1** | Missing legacy libraries | Ubuntu 22.04 has newer libncurses.so.6 but toolchain needs v5 | `libncurses.so.5: cannot open shared object file` | N/A | Install legacy packages + create symbolic links | ✅ |
+| **Task 7** | RISC-V Proxy Kernel build fails | GCC 8.3.0 too old for newer CSRs (`menvcfg`, `senvcfg`) | `Error: unknown CSR 'menvcfg'` `Error: unknown CSR 'senvcfg'` | N/A - Direct identification | Use compatible riscv-pk v1.0.0 | ✅ |
+| **Task 9** | Icarus configure failure | RISC-V `as` used instead of system `as` | `C compiler cannot create executables` | Install dependencies, clean builds, force CC, env vars | Complete PATH isolation during build | ✅ |
+| **Task 9** | Assembler option error | RISC-V assembler doesn't understand x86-64 options | `as: unrecognized option '--64'` | Multiple configure attempts with different flags | Use clean PATH `/usr/bin:/bin:/usr/sbin:/sbin` | ✅ |
+| **Task 9** | Tool not found after install | `/usr/local/bin` not in PATH | `iverilog: command not found` | N/A | Add `/usr/local/bin` to PATH permanently | ✅ |
+| **Final Test** | Preprocessor macro error | Shell expansion + preprocessor tokenization | `'kevinshah' undeclared identifier` | Alternative quoting, variables, escaping | Explicit quoted string literals | ✅ |
+| **Final Test** | Hostname parsing error | Hyphens parsed as separate tokens | `'Dell' and 'G15' undeclared` | Multiple quoting syntaxes | Direct string constants bypass shell expansion | ✅ |
+
+---
