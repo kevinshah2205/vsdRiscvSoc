@@ -441,3 +441,83 @@ GCC_VLEN: 5
 | **Final Test** | Hostname parsing error | Hyphens parsed as separate tokens | `'Dell' and 'G15' undeclared` | Multiple quoting syntaxes | Direct string constants bypass shell expansion | ✅ |
 
 ---
+
+## 🔧 Detailed Problem Categories
+
+### 1. **Library Compatibility Issues**
+- **Problem**: Modern Ubuntu systems lack legacy library versions required by older toolchains
+- **Impact**: GDB and other tools fail to start due to missing dependencies
+- **Solution**: Manual installation of legacy packages with symbolic link creation
+
+### 2. **Version Incompatibility Between Tools**
+- **Problem**: Newer software versions use features not supported by older toolchain components
+- **Impact**: Build failures with cryptic CSR (Control and Status Register) errors
+- **Solution**: Use version-matched compatible releases that align with toolchain era
+
+### 3. **Cross-Compiler PATH Interference**
+- **Problem**: RISC-V cross-compiler tools interfere with native x86-64 compilation
+- **Impact**: Native builds fail because wrong assembler is used for host architecture
+- **Solution**: Temporary PATH isolation during native tool compilation
+
+### 4. **Shell Command Expansion Issues**
+- **Problem**: Shell command substitution creates unquoted tokens for C preprocessor
+- **Impact**: Preprocessor sees separate identifiers instead of single string constants  
+- **Solution**: Use explicit string literals to bypass problematic shell expansion
+
+### 5. **Installation Path Configuration**
+- **Problem**: Tools install to non-standard locations not included in default PATH
+- **Impact**: Successfully installed tools appear missing and unusable
+- **Solution**: Permanent PATH updates to include all installation directories
+
+---
+
+## 🎯 Key Learning Points
+
+### **Debugging Methodology**
+- **Multi-stage debugging**: Complex issues often require multiple investigation rounds
+- **Root cause isolation**: Surface symptoms may not reveal the underlying problem
+- **Environment testing**: Test individual components to identify interference sources
+
+### **Toolchain Management**
+- **Version compatibility**: All components must match in feature support and era
+- **PATH management**: Cross-compilers can pollute native build environments  
+- **Clean environments**: Isolate native and cross-compilation environments when needed
+
+### **Configuration Best Practices**
+- **Persistent configuration**: Always make PATH changes permanent via `.bashrc`
+- **Verification steps**: Test each installation step before proceeding
+- **Backup strategies**: Save working configurations before making changes
+
+---
+
+## 🔍 Troubleshooting Tips
+
+### **When Builds Fail:**
+1. Check which tools are actually being used (`which gcc`, `which as`)
+2. Verify library dependencies (`ldd` for missing libraries)
+3. Examine detailed error logs rather than summary messages
+4. Test components individually in isolation
+
+### **For PATH Issues:**
+1. Use `echo $PATH` to verify current configuration
+2. Test with minimal clean PATH when debugging
+3. Check installation directories with `ls -la`
+4. Verify permanent changes with fresh shell sessions
+
+### **For Compatibility Problems:**
+1. Check tool versions and release dates for alignment
+2. Look for older compatible versions when needed
+3. Understand feature dependencies between components
+4. Consider using container environments for complex setups
+
+---
+
+## 📋 Final Verification Checklist
+
+- [ ] All required tools found in PATH (`which` commands succeed)
+- [ ] Tool versions compatible with each other
+- [ ] Unique test program compiles without errors
+- [ ] Unique test program runs and produces expected output
+- [ ] PATH configuration persists across shell sessions
+- [ ] No cross-compiler interference with native builds
+
