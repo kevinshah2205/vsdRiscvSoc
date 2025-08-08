@@ -6,15 +6,85 @@ This repository contains the implementation and verification of 4 RISC-V C progr
 ## System Information
 
 ### Spike Version
+To find its version we use the following command :
 ```bash
-$ spike --version
-# [ADD SPIKE VERSION OUTPUT HERE]
+$ spike -h
+```
+And we got its output as :-
+```
+Spike RISC-V ISA Simulator 1.1.1-dev
+
+usage: spike [host options] <target program> [target options]
+Host Options:
+  -p<n>                 Simulate <n> processors [default 1]
+  -m<n>                 Provide <n> MiB of target memory [default 2048]
+  -m<a:m,b:n,...>       Provide memory regions of size m and n bytes
+                          at base addresses a and b (with 4 KiB alignment)
+  -d                    Interactive debug mode
+  -g                    Track histogram of PCs
+  -l                    Generate a log of execution
+  -s                    Command I/O via socket (use with -d)
+  -h, --help            Print this help message
+  --halted              Start halted, allowing a debugger to connect
+  --log=<name>          File name for option -l
+  --debug-cmd=<name>    Read commands from file (use with -d)
+  --isa=<name>          RISC-V ISA string [default rv64imafdc_zicntr_zihpm]
+  --pmpregions=<n>      Number of PMP regions [default 16]
+  --pmpgranularity=<n>  PMP Granularity in bytes [default 4]
+  --priv=<m|mu|msu>     RISC-V privilege modes supported [default MSU]
+  --pc=<address>        Override ELF entry point
+  --hartids=<a,b,...>   Explicitly specify hartids, default is 0,1,...
+  --ic=<S>:<W>:<B>      Instantiate a cache model with S sets,
+  --dc=<S>:<W>:<B>        W ways, and B-byte blocks (with S and
+  --l2=<S>:<W>:<B>        B both powers of 2).
+  --big-endian          Use a big-endian memory system.
+  --misaligned          Support misaligned memory accesses
+  --device=<name>       Attach MMIO plugin device from an --extlib library,
+                          specify --device=<name>,<args> to pass down extra args.
+  --log-cache-miss      Generate a log of cache miss
+  --log-commits         Generate a log of commits info
+  --extension=<name>    Specify RoCC Extension
+                          This flag can be used multiple times.
+  --extlib=<name>       Shared library to load
+                        This flag can be used multiple times.
+  --rbb-port=<port>     Listen on <port> for remote bitbang connection
+  --dump-dts            Print device tree string and exit
+  --dtb=<path>          Use specified device tree blob [default: auto-generate]
+  --disable-dtb         Don't write the device tree blob into memory
+  --kernel=<path>       Load kernel flat image into memory
+  --initrd=<path>       Load kernel initrd into memory
+  --bootargs=<args>     Provide custom bootargs for kernel [default: console=ttyS0 earlycon]
+  --real-time-clint     Increment clint time at real-time rate
+  --triggers=<n>        Number of supported triggers [default 4]
+  --dm-progsize=<words> Progsize for the debug module [default 2]
+  --dm-sba=<bits>       Debug system bus access supports up to <bits> wide accesses [default 0]
+  --dm-auth             Debug module requires debugger to authenticate
+  --dmi-rti=<n>         Number of Run-Test/Idle cycles required for a DMI access [default 0]
+  --dm-abstract-rti=<n> Number of Run-Test/Idle cycles required for an abstract command to execute [default 0]
+  --dm-no-hasel         Debug module won't support hasel
+  --dm-no-abstract-csr  Debug module won't support abstract CSR access
+  --dm-no-abstract-fpr  Debug module won't support abstract FPR access
+  --dm-no-halt-groups   Debug module won't support halt groups
+  --dm-no-impebreak     Debug module won't support implicit ebreak in program buffer
+  --blocksz=<size>      Cache block size (B) for CMO operations(powers of 2) [default 64]
+  --instructions=<n>    Stop after n instructions
 ```
 
 ### GCC Toolchain Information
+To find its version we use the following command :
 ```bash
 $ riscv64-unknown-elf-gcc -v
-# [ADD GCC -v OUTPUT HERE]
+```
+And we got its output as :-
+```
+$ Using built-in specs.
+COLLECT_GCC=riscv64-unknown-elf-gcc
+COLLECT_LTO_WRAPPER=/home/kevinshah/riscv_toolchain/riscv/libexec/gcc/riscv64-unknown-elf/15.1.0/lto-wrapper
+Target: riscv64-unknown-elf
+Configured with: /home/kevinshah/riscv_toolchain/riscv-gnu-toolchain/gcc/configure --target=riscv64-unknown-elf --prefix=/home/kevinshah/riscv_toolchain/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-pkgversion=g1b306039ac4 --with-system-zlib --enable-tls --with-newlib --with-sysroot=/home/kevinshah/riscv_toolchain/riscv/riscv64-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gc --with-isa-spec=20191213 'CFLAGS_FOR_TARGET=-Os    -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os    -mcmodel=medlow'
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 15.1.0 (g1b306039ac4)
 ```
 
 ## Step-by-Step Implementation
@@ -41,7 +111,11 @@ echo "Build Epoch: $E"
 
 **Output:**
 ```
-# [ADD ENVIRONMENT VARIABLE VERIFICATION OUTPUT HERE]
+Username: kevinshah
+Hostname: kevinshah-Dell-G15-5520
+Machine ID: a24572cb3af740b1
+Build UTC: 2025-08-08T12:00:42Z
+Build Epoch: 1754654442
 ```
 
 ### B. Common Header (unique.h)
