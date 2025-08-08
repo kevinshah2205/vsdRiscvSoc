@@ -1,9 +1,9 @@
-# RISC-V Task 2 - Local Setup Verification
+# 🛠️ RISC-V Task 2 - Local Setup Verification
 
 ## Overview
 This repository contains the implementation and verification of 4 RISC-V C programs compiled with the local RISC-V toolchain and executed using Spike simulator with proxy kernel (pk). Each program includes a uniqueness mechanism that embeds username, hostname, machine ID, and timestamps to ensure outputs are unique to this PC.
 
-## System Information
+## 🔧 System Information
 
 ### Spike Version
 To find its version we use the following command :
@@ -25,7 +25,7 @@ And we got its output as :-
 
 <img width="1841" height="354" alt="image" src="https://github.com/user-attachments/assets/221fe983-f631-4012-ab9d-59633b9fe6ce" />
 
-## Step-by-Step Implementation
+## 🔍 Step-by-Step Implementation
 
 ### A. Uniqueness Mechanism Setup
 First, set identity variables in the Linux host shell:
@@ -316,7 +316,7 @@ riscv64-unknown-elf-gcc -O0 -S -march=rv64imac -mabi=lp64 \
 riscv64-unknown-elf-objdump -d ./bubble_sort | sed -n '/<main>:/,/^$/p' > bubble_sort_main_objdump.txt
 ```
 
-## Repository Structure
+## 📁 Repository Structure
 ```
 riscv-task2-<username>/
 ├── unique.h
