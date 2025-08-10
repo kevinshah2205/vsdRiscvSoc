@@ -15,6 +15,7 @@ A comprehensive guide for setting up a complete RISC-V development toolchain wit
 - [Project Structure](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/README.md#-project-structure)
 - [Contributing](#contributing)
 - [License](#license)
+- [Acknowledgments]()
 
 ## 🎯 Overview
 
@@ -535,3 +536,80 @@ riscv_toolchain/
 ├── unique_test.c               
 └── unique_test                
 ```
+
+## 🤝 Contributing
+
+Contributions to improve this RISC-V toolchain setup guide are welcome! Here's how you can help:
+
+### 🐛 Reporting Issues
+- Found a new compatibility issue? Open an issue with:
+  - Your Ubuntu version and system details
+  - Complete error messages
+  - Steps to reproduce the problem
+
+### 💡 Suggesting Improvements
+- Alternative solutions for existing problems
+- Support for additional Ubuntu versions
+- Performance optimizations for build processes
+
+### 🔧 Submitting Fixes
+1. Fork the repository
+2. Create a feature branch: `git checkout -b fix/your-improvement`
+3. Test your changes on a clean Ubuntu installation
+4. Update documentation with any new steps or solutions
+5. Submit a pull request with detailed description
+
+### 📝 Documentation Updates
+- Fix typos or unclear instructions
+- Add screenshots for new error scenarios
+- Improve troubleshooting section with additional solutions
+
+**Note**: Please test all changes on Ubuntu 22.04 LTS to ensure compatibility with the documented environment.
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the details below:
+
+MIT License
+
+Copyright (c) 2024 Kevin Shah
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+### Third-Party Components
+This project uses and documents the installation of several open-source tools:
+- **RISC-V GCC Toolchain** - Various licenses (GPL, LGPL, BSD)
+- **Spike RISC-V Simulator** - BSD License  
+- **RISC-V Proxy Kernel** - BSD License
+- **Icarus Verilog** - GPL License
+- **GTKWave** - GPL License
+
+Please refer to each tool's original repository for their specific license terms.
+
+---
+
+## 🙏 Acknowledgments
+
+- **RISC-V Foundation** for the open RISC-V ISA specification
+- **SiFive** for providing prebuilt GCC toolchain
+- **UC Berkeley** for the Spike simulator and Proxy Kernel
+- **VSD Team** for the comprehensive RISC-V learning curriculum
+- **Ubuntu Community** for excellent documentation and support
+
+Special thanks to all contributors who helped identify and solve the various compatibility issues documented in this guide.
