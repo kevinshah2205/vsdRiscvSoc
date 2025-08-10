@@ -9,13 +9,13 @@ A comprehensive guide for setting up a complete RISC-V development toolchain wit
 ## 📋 Table of Contents
 
 - [Overview](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-overview)
-- [Prerequisites](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/README.md#-prerequisites)
-- [Installation](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/README.md#-installation)
-- [Issues Encountered & Solutions](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/README.md#-issues-encountered--solutions)
-- [Project Structure](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/README.md#-project-structure)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments]()
+- [Prerequisites](https://github.com/kevinshah2205/vsdRiscvSoc/blob/main/riscv-task1-kevinshah/README.md#-overview)
+- [Installation](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-installation)
+- [Issues Encountered & Solutions](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-issues-encountered--solutions)
+- [Project Structure](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-project-structure)
+- [Contributing](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-contributing)
+- [License](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-contributing)
+- [Acknowledgments](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-contributing)
 
 ## 🎯 Overview
 
