@@ -14,8 +14,8 @@ A comprehensive guide for setting up a complete RISC-V development toolchain wit
 - [Issues Encountered & Solutions](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-issues-encountered--solutions)
 - [Project Structure](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-project-structure)
 - [Contributing](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-contributing)
-- [License](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-contributing)
-- [Acknowledgments](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-contributing)
+- [License](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-license)
+- [Acknowledgments](https://github.com/kevinshah2205/vsdRiscvSoc/tree/main/riscv-task1-kevinshah#-acknowledgments)
 
 ## 🎯 Overview
 
